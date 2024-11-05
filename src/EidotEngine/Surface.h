@@ -12,9 +12,9 @@ namespace ei {
 
 	/////////////////////////////////
 	/// TrilangleSurface                         
-	/// point0 - Vector2f(0.0f, 0.0f)
-	/// point1 - Vector2f(0.0f, 0.0f) 
-	/// point2 - Vector2f(0.0f, 0.0f)
+	/// point0 - Vector2f(x, y)
+	/// point1 - Vector2f(x, y) 
+	/// point2 - Vector2f(x, y)
 	class TrilangleSurface {
 	private:
 		Vector2f _point0;
@@ -59,10 +59,10 @@ namespace ei {
 
 	/////////////////////////////////
 	/// RectangleSurface                         
-	/// point0 - Vector2f(0.0f, 0.0f)
-	/// point1 - Vector2f(0.0f, 0.0f) 
-	/// point2 - Vector2f(0.0f, 0.0f)
-	/// point3 - Vector2f(0.0f, 0.0f)
+	/// point0 - Vector2f(x, y)
+	/// point1 - Vector2f(x, y) 
+	/// point2 - Vector2f(x, y)
+	/// point3 - Vector2f(x, y)
 	class RectangleSurface {
 	private:
 		Vector2f _point0;
@@ -97,7 +97,7 @@ namespace ei {
 
 	/////////////////////////////////
 	/// PoligonSurface                         
-	/// points - std::vector(Vector2f)
+	/// points - std::vector(Vector2f(x, y))
 	class PoligonSurface {
 	private:
 		std::vector<Vector2f> _points;

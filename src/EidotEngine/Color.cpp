@@ -70,3 +70,11 @@ void ei::Color::outInformation() const {
 		;
 
 }
+
+void ei::Color::operator=(Color c) {
+	this->_r = c._r;
+	this->_g = c._g;
+	this->_b = c._b;
+	this->_a = c._a;
+
+}

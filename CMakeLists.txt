@@ -8,6 +8,8 @@ add_executable(EidotEngine src/main.cpp
 src/EidotEngine/Vectors.h src/EidotEngine/Vectors.cpp 
 src/EidotEngine/Color.h src/EidotEngine/Color.cpp 
 src/EidotEngine/Surface.h src/EidotEngine/Surface.cpp 
+src/EidotEngine/GraphicObject.h src/EidotEngine/GraphicObject.cpp 
+src/EidotEngine/RenderObject.h src/EidotEngine/RenderObject.cpp 
 )
 
 add_subdirectory(external/glad)

@@ -14,10 +14,10 @@ namespace ei {
 	/// 0   0   0   0	 
 	class Color {
 	private:
-		float _r = 0.f;
-		float _g = 0.f;
-		float _b = 0.f;
-		float _a = 0.f;
+		float _r = 1.f;
+		float _g = 1.f;
+		float _b = 1.f;
+		float _a = 1.f;
 
 	public:
 
@@ -45,6 +45,11 @@ namespace ei {
 		std::vector<float> getColor() const;
 
 		void outInformation() const;
+
+		/////////////////////////////
+		/// Operators
+
+		void operator=(Color c);
 
 	};
 
