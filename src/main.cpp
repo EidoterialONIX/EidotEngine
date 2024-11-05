@@ -3,29 +3,24 @@
 #include "EidotEngine/Surface.h"
 #include "EidotEngine/GraphicObject.h"
 #include "EidotEngine/RenderObject.h"
+#include "EidotEngine/Camera.h"
 
 
 int main() {
 	
-	ei::DefaultTrilangleGraphicObject dtgo;
+	ei::Camera camera;
 
-	dtgo.setDefaultTrilangleGraphicObject(
-		ei::Vector2f(100.f, 40.f),
-		ei::Color(),
-		10
+	camera.setPosition(
+		ei::Vector3f(200.f, 200.f, 1.5f)
+	);
+	camera.setSize(
+		ei::Vector2f(700.f, 200.f)
+	);
+	camera.setDirection(
+		ei::Vector2f(0.f, 0.f)
 	);
 
-	dtgo.setRadius(100);
-	dtgo.setColor(ei::Color(255, 45, 67, 9));
-
-	ei::GraphicRenderObject gro;
-
-	gro.generateGraphicRenderObject(
-		"Object1",
-		dtgo
-	);
-
-	gro.outInformation();
+	camera.outInformation();
 
 	return 0;
 }
