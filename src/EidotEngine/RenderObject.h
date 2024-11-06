@@ -44,6 +44,9 @@ namespace ei {
 			DefaultTrilangleGraphicObject dtgo
 		);
 
+		void setName(std::string name);
+		std::string getName() const;
+
 		void setOrigin(Vector2f origin);
 		Vector2f getOrigin() const;
 

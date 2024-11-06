@@ -110,4 +110,53 @@ namespace ei {
 		Vector3f operator/(Vector3f v);
 
 	};
+
+	/////////////////////////////////
+	/// Vector2i
+	/// X    Y
+	/// 0    0
+	class Vector2i {
+	public:
+		int x = 0;
+		int y = 0;
+
+		/////////////////////////////
+		/// Constructors
+
+		Vector2i() = default;
+		Vector2i(
+			int x,
+			int y
+		);
+
+		/////////////////////////////
+		/// Function
+
+		void outInformation() const;
+
+		/////////////////////////////
+		/// Operators
+
+		void operator=(Vector2i v);
+
+		bool operator==(Vector2i v);
+		bool operator!=(Vector2i v);
+
+		bool operator<=(Vector2i v);
+		bool operator>=(Vector2i v);
+
+		bool operator<(Vector2i v);
+		bool operator>(Vector2i v);
+
+		void operator+=(Vector2i v);
+		void operator-=(Vector2i v);
+		void operator*=(Vector2i v);
+		void operator/=(Vector2i v);
+
+		Vector2i operator+(Vector2i v);
+		Vector2i operator-(Vector2i v);
+		Vector2i operator*(Vector2i v);
+		Vector2i operator/(Vector2i v);
+
+	};
 }

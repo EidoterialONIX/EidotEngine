@@ -7,28 +7,26 @@
 /// Camera
 
 void ei::Camera::UPDATE__POINTS() {
-	this->_size_camera *= Vector2f(
-		this->_position_camera.z,
-		this->_position_camera.z
-	);
+	
+	float frag_view = this->_view / 2.f;
+	float frag = this->_position_camera.z / 90.f;
 
 	this->_point0 = Vector2f(
-		this->_position_camera.x - this->_size_camera.x,
-		this->_position_camera.y - this->_size_camera.y
+		(this->_position_camera.x - (frag * (frag_view - this->_direction_camera.x))) * 2.f,
+		(this->_position_camera.y - (frag * (frag_view - this->_direction_camera.y))) * 2.f
 	);
 	this->_point1 = Vector2f(
-		this->_position_camera.x + this->_size_camera.x,
-		this->_position_camera.y - this->_size_camera.y
+		(this->_position_camera.x + (frag * (frag_view + this->_direction_camera.x))) * 2.f,
+		(this->_position_camera.y - (frag * (frag_view - this->_direction_camera.y))) * 2.f
 	);
 	this->_point2 = Vector2f(
-		this->_position_camera.x - this->_size_camera.x,
-		this->_position_camera.y + this->_size_camera.y
+		(this->_position_camera.x - (frag * (frag_view - this->_direction_camera.x))) * 2.f,
+		(this->_position_camera.y + (frag * (frag_view + this->_direction_camera.y))) * 2.f
 	);
 	this->_point3 = Vector2f(
-		this->_position_camera.x + this->_size_camera.x,
-		this->_position_camera.y + this->_size_camera.y
+		(this->_position_camera.x + (frag * (frag_view + this->_direction_camera.x))) * 2.f,
+		(this->_position_camera.y + (frag * (frag_view + this->_direction_camera.y))) * 2.f
 	);
-
 
 }
 
@@ -43,24 +41,13 @@ ei::Vector3f ei::Camera::getPosition() const {
 
 }
 
-void ei::Camera::setSize(Vector2f size) {
-	this->_size_camera = size;
-
-	this->UPDATE__POINTS();
-
-}
-ei::Vector2f ei::Camera::getSize() const {
-	return this->_size_camera;
-
-}
-
-void ei::Camera::setDirection(Vector2f direction) {
+void ei::Camera::setDirection(Vector2i direction) {
 	this->_direction_camera = direction;
 
 	this->UPDATE__POINTS();
 	
 }
-ei::Vector2f ei::Camera::getDirection() const {
+ei::Vector2i ei::Camera::getDirection() const {
 	return this->_direction_camera;
 
 }
@@ -72,8 +59,6 @@ void ei::Camera::outInformation() const {
 		<< "Position camera: "
 		<< "(X: " << this->_position_camera.x << ", Y: " << this->_position_camera.y
 		<< ", Z: " << this->_position_camera.z << ") " << endl
-		<< "Size: "
-		<< "(X: " << this->_size_camera.x << ", Y: " << this->_size_camera.y << ") " << endl
 		<< "Direction camera: "
 		<< "(X: " << this->_direction_camera.x << ", Y: " << this->_direction_camera.y << endl
 		<< "Point0: "
@@ -84,7 +69,6 @@ void ei::Camera::outInformation() const {
 		<< "(X: " << this->_point2.x << ", Y: " << this->_point2.y << ") " << endl
 		<< "Point3: "
 		<< "(X: " << this->_point3.x << ", Y: " << this->_point3.y << ") " << endl
-		<< "Rotate: " << this->_rotate << endl
 		<< "Speed: " << this->_speed << endl
 		;
 }

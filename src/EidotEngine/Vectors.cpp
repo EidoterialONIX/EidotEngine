@@ -244,3 +244,118 @@ ei::Vector3f ei::Vector3f::operator/(Vector3f v) {
 	);
 
 }
+
+/////////////////////////////////////////////////////
+/// Vector2i
+
+ei::Vector2i::Vector2i(
+	int x,
+	int y
+) : x(x), y(y) {}
+
+void ei::Vector2i::outInformation() const {
+	using namespace std;
+
+	cout
+		<< "Vector 2 int - "
+		<< "X: "
+		<< this->x
+		<< " Y: "
+		<< this->y
+		<< endl
+		;
+
+}
+
+void ei::Vector2i::operator=(Vector2i v) {
+	this->x = v.x; this->y = v.y;
+
+}
+
+bool ei::Vector2i::operator==(Vector2i v) {
+	if (this->x == v.x && this->y == v.y) return true;
+	else return false;
+
+}
+
+bool ei::Vector2i::operator!=(Vector2i v) {
+	if (this->x == v.x && this->y == v.y) return false;
+	else return true;
+
+}
+
+bool ei::Vector2i::operator<=(Vector2i v) {
+	if (this->x <= v.x && this->y <= v.y) return true;
+	else return false;
+
+}
+
+bool ei::Vector2i::operator>=(Vector2i v) {
+	if (this->x >= v.x && this->y >= v.y) return true;
+	else return false;
+
+}
+
+bool ei::Vector2i::operator<(Vector2i v) {
+	if (this->x < v.x && this->y < v.y) return true;
+	else return false;
+
+}
+
+bool ei::Vector2i::operator>(Vector2i v) {
+	if (this->x > v.x && this->y > v.y) return true;
+	else return false;
+
+}
+
+void ei::Vector2i::operator+=(Vector2i v) {
+	this->x += v.x; this->y += v.y;
+
+}
+
+void ei::Vector2i::operator-=(Vector2i v) {
+	this->x -= v.x; this->y -= v.y;
+
+}
+
+void ei::Vector2i::operator*=(Vector2i v) {
+	this->x *= v.x; this->y *= v.y;
+
+}
+
+void ei::Vector2i::operator/=(Vector2i v) {
+	this->x /= v.x; this->y /= v.y;
+
+}
+
+ei::Vector2i ei::Vector2i::operator+(Vector2i v) {
+	return Vector2i(
+		this->x + v.x,
+		this->y + v.y
+	);
+
+}
+
+ei::Vector2i ei::Vector2i::operator-(Vector2i v) {
+	return Vector2i(
+		this->x - v.x,
+		this->y - v.y
+	);
+
+}
+
+ei::Vector2i ei::Vector2i::operator*(Vector2i v) {
+	return Vector2i(
+		this->x * v.x,
+		this->y * v.y
+	);
+
+}
+
+ei::Vector2i ei::Vector2i::operator/(Vector2i v) {
+	return Vector2i(
+		this->x / v.x,
+		this->y / v.y
+	);
+
+}

@@ -22,6 +22,15 @@ void ei::GraphicRenderObject::generateGraphicRenderObject(
 
 }
 
+void ei::GraphicRenderObject::setName(std::string name) {
+	this->_name = name;
+
+}
+std::string ei::GraphicRenderObject::getName() const {
+	return this->_name;
+
+}
+
 void ei::GraphicRenderObject::setOrigin(Vector2f origin) {
 	this->_origin = origin;
 
