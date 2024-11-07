@@ -30,6 +30,18 @@ void ei::Camera::UPDATE__POINTS() {
 
 }
 
+std::vector<ei::Vector2f> ei::Camera::getCameraPoints() const {
+	std::vector<Vector2f> points;
+	points.resize(4);
+	points[0] = this->_point0;
+	points[1] = this->_point1;
+	points[2] = this->_point2;
+	points[3] = this->_point3;
+
+	return points;
+
+}
+
 void ei::Camera::setPosition(Vector3f position) {
 	this->_position_camera = position;
 
@@ -49,6 +61,24 @@ void ei::Camera::setDirection(Vector2i direction) {
 }
 ei::Vector2i ei::Camera::getDirection() const {
 	return this->_direction_camera;
+
+}
+
+void ei::Camera::setView(unsigned int view) {
+	this->_view = view;
+
+}
+unsigned int ei::Camera::getView() const {
+	return this->_view;
+
+}
+
+void ei::Camera::setSpeed(float speed) {
+	this->_speed = speed;
+
+}
+float ei::Camera::getSpeed() const {
+	return this->_speed;
 
 }
 

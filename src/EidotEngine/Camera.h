@@ -43,11 +43,19 @@ namespace ei {
 		/////////////////////////////
 		/// Function
 
+		std::vector<Vector2f> getCameraPoints() const;
+
 		void setPosition(Vector3f position);
 		Vector3f getPosition() const;
 
 		void setDirection(Vector2i direction);
 		Vector2i getDirection() const;
+
+		void setView(unsigned int view);
+		unsigned int getView() const;
+
+		void setSpeed(float speed);
+		float getSpeed() const;
 
 		void outInformation() const;
 

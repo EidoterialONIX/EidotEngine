@@ -12,6 +12,8 @@ src/EidotEngine/GraphicObject.h src/EidotEngine/GraphicObject.cpp
 src/EidotEngine/RenderObject.h src/EidotEngine/RenderObject.cpp 
 src/EidotEngine/Camera.h src/EidotEngine/Camera.cpp 
 src/EidotEngine/Scena.h src/EidotEngine/Scena.cpp 
+src/EidotEngine/Transform.h src/EidotEngine/Transform.cpp 
+src/EidotEngine/Render.h src/EidotEngine/Render.cpp 
 )
 
 add_subdirectory(external/glad)

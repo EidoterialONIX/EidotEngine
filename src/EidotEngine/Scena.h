@@ -58,6 +58,7 @@ namespace ei {
 	private:
 		Camera _camera;
 		std::vector<ScenaUnit> _scena_units;
+		Vector2f _screen_size;
 
 	public:
 
